@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 5.2.4//EN" "http://www.springframework.org/dtd/spring-beans-5.2.4.dtd">
+
+<beans>
+
+	<bean id = "triangle" class = "org.pivanchev.Triangle"> 
+		<property name = "pointA" ref = "zeroPoint"/>
+		
+		<property name = "pointB">
+			<bean id = "point2" class = "org.pivanchev.Point">
+				<property name = "x" value = "-20"/>
+				<property name = "y" value = "0"/>
+			</bean>
+		</property>
+		
+		<property name = "pointC">
+			<bean id = "point3" class = "org.pivanchev.Point">				
+					<property name = "x" value = "0"/>
+					<property name = "y" value = "20"/>
+			</bean>
+		</property>	
+		
+	</bean>
+	
+	<bean id = "zeroPoint" class = "org.pivanchev.Point">
+		<property name = "x" value = "0"/>
+		<property name = "y" value = "0"/>
+	</bean>
+
+
+</beans>
